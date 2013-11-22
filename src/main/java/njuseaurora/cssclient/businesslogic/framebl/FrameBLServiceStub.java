@@ -29,7 +29,6 @@ public class FrameBLServiceStub implements FrameBLService {
         this.base = base;
     }
 
-    
     public FrameVO createFrame(int total, String description) {
         this.total = total;
         this.base = base;
@@ -38,23 +37,20 @@ public class FrameBLServiceStub implements FrameBLService {
         // return new FrameVO(total, description);
     }
 
-    
     public FrameVO createBlock(String name, int lower, int upper, String description) {
-   //     BlockVO blockVO = new BlockVO(name, description, upper, lower);
-     //   blocks.add(blockVO);
-       // System.out.println("The new block is stored in the database");
+        //     BlockVO blockVO = new BlockVO(name, description, upper, lower);
+        //   blocks.add(blockVO);
+        // System.out.println("The new block is stored in the database");
         return null;
         //return null;
     }
 
-    
     public boolean release() {
         this.isPublic = true;
         System.out.println("The frame can be observed by every cunstomer");
-		return true;
+        return true;
     }
 
-    
     public FrameVO modifyBase(int total, String description) {
         this.base = description;
         this.total = total;
@@ -64,23 +60,21 @@ public class FrameBLServiceStub implements FrameBLService {
         //int the real program will store the changes to file
     }
 
-    
     public FrameVO modifyBlock(int ID, String name, int lower, int upper, String description) {
-     //   BlockVO bvo = new BlockVO(name, description, upper, lower);
-       // blocks.set(ID, bvo);
+        //   BlockVO bvo = new BlockVO(name, description, upper, lower);
+        // blocks.set(ID, bvo);
         System.out.println("successfuly modify the block");
         return null;
     }
 
-    
     public FrameVO look() {
-      // return new FrameVO(200, "Just for testing!");
-    	return null;
+        // return new FrameVO(200, "Just for testing!");
+        return null;
     }
 
-	public BlockVO createBlock(String name, String description, int lower,
-			int upper) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public BlockVO createBlock(String name, String description, int lower,
+            int upper) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

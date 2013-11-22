@@ -5,6 +5,8 @@
 package njuseaurora.cssclient.po.framepo;
 
 import java.util.ArrayList;
+import njuseaurora.cssclient.businesslogic.framebl.Block;
+import njuseaurora.cssclient.businesslogic.framebl.EduFrame;
 
 /**
  *
@@ -15,11 +17,17 @@ public class FramePO {
     private int total;
     private String base;
     private ArrayList<BlockPO> blocks = new ArrayList<BlockPO>();
-    private boolean isPublic=false;
+    private Block[] blist;
+    private boolean isPublic = false;
 
     public FramePO(int total, String base) {
         this.total = total;
         this.base = base;
+    }
+
+    public FramePO(EduFrame f) {
+        this(f.getTotal(), f.getDescription());
+
     }
 
     public int getTotal() {
@@ -41,12 +49,14 @@ public class FramePO {
     public void addBlock(BlockPO blockPO) {
         getBlocks().add(blockPO);
     }
-    public void setPublic(){
+
+    public void setPublic() {
         this.setIsPublic(true);
     }
 
     public ArrayList<BlockPO> getBlocks() {
-        return blocks;
+        //   return blist.toBlockArray();
+        return this.blocks;
     }
 
     public void setBlocks(ArrayList<BlockPO> blocks) {
@@ -59,5 +69,13 @@ public class FramePO {
 
     public void setIsPublic(boolean isPublic) {
         this.isPublic = isPublic;
+    }
+    public BlockPO getBlockPO(int i)
+    {
+        return this.blocks.get(i);
+    }
+    public int getBlockSum()
+    {
+        return this.blocks.size();
     }
 }

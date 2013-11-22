@@ -4,6 +4,8 @@
  */
 package njuseaurora.cssclient.po.framepo;
 
+import njuseaurora.cssclient.businesslogic.framebl.Block;
+
 /**
  *
  * @author Administrator
@@ -20,6 +22,10 @@ public class BlockPO {
         this.description = description;
         this.upper = upper;
         this.lower = lower;
+    }
+    public BlockPO(Block b)
+    {
+        this(b.getName(), b.getDescription(), b.getUpper(), b.getLower());
     }
 
     public String getName() {
