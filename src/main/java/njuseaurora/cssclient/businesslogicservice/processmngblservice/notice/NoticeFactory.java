@@ -11,8 +11,9 @@ import njuseaurora.cssclient.businesslogic.procssmngbl.noticebl.NoticeController
  * @author Administrator
  */
 public class NoticeFactory {
-    
+
     public NoticeBLService bl;
+
     public NoticeBLService createNoticeBL() {
         return new NoticeController();
     }

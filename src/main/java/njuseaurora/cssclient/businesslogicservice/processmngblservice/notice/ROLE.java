@@ -9,5 +9,6 @@ package njuseaurora.cssclient.businesslogicservice.processmngblservice.notice;
  * @author Administrator
  */
 public enum ROLE {
-    TEACHER,STUDENT,INSJW,BEGINNER,ALL
+
+    TEACHER, STUDENT, INSJW, BEGINNER, ALL
 }

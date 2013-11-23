@@ -4,7 +4,6 @@
  */
 package njuseaurora.cssclient.businesslogicservice.processmngblservice.notice;
 
-
 import njuseaurora.cssclient.businesslogic.procssmngbl.noticebl.NoticeList;
 
 /**
@@ -12,5 +11,6 @@ import njuseaurora.cssclient.businesslogic.procssmngbl.noticebl.NoticeList;
  * @author Administrator
  */
 public interface NoticeReceiverService {
+
     public NoticeList getNoticeList();
 }

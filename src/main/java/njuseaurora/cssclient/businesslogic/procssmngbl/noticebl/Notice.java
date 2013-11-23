@@ -15,31 +15,41 @@ import njuseaurora.cssclient.vo.processmngvo.NoticeVO;
  * @author Administrator
  */
 public class Notice {
-	private ROLE role;
-	private static int index=0;
+
+    private ROLE role;
+    private static int index = 0;
     private String content;
-    private Date  time;
+    private Date time;
     private int num;
+    private String name;
 
     public Notice() {
-    	index++;
-    	this.num=index;
+        index++;
+        this.num = index;
     }
-    public Notice(String content,Date time)
-    {
-    	this();
-    	this.content=content;
-    	this.time=time;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public Notice(NoticeVO nvo)
-    {
-    this(nvo.getContent(),nvo.getTime());
+
+    public String getName() {
+        return this.name;
     }
-    
-    public Notice(NoticePO npo)
-    {
-    this(npo.getContent(),npo.getTime());
+
+    public Notice(String content, Date time) {
+        this();
+        this.content = content;
+        this.time = time;
     }
+
+    public Notice(NoticeVO nvo) {
+        this(nvo.getContent(), nvo.getTime());
+    }
+
+    public Notice(NoticePO npo) {
+        this(npo.getContent(), npo.getTime());
+    }
+
     public String getContent() {
         return content;
     }
@@ -55,22 +65,22 @@ public class Notice {
     public void setTime(Date time) {
         this.time = time;
     }
-    public int getNum()
-    {
-    	return this.num;
+
+    public int getNum() {
+        return this.num;
     }
-    public ROLE getRole()
-    {
-    	return this.role;
+
+    public ROLE getRole() {
+        return this.role;
     }
-    
-    public boolean send(){
-    	NoticePO npo=new NoticePO(this);
-    	
+
+    public boolean send() {
+        NoticePO npo = new NoticePO(this);
+
         return false;
     }
-    public boolean send(ROLE role){
+
+    public boolean send(ROLE role) {
         return false;
     }
-    
 }

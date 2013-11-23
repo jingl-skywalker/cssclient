@@ -13,36 +13,41 @@ import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.MySt
  *
  * @author Administrator
  */
-public class StartState implements MyState{
-	
-	Calendar calendar;
+public class StartState implements MyState {
+
+    Calendar calendar;
     StateContext context;
     StateTime stm;
-    
-    public StartState(StateContext context){
-    	this.calendar=Calendar.getInstance();
-        this.context=context;
+    StateOperation stateOperation;
+
+    public StartState(StateContext context) {
+        this.calendar = Calendar.getInstance();
+        this.context = context;
+        this.stateOperation = new StateOperation(context, stm);
     }
 
-    
+    @Override
     public void setBegining(StateTime stm) {
-       this.stm.setEndTime(stm.getEndTime());
+        stateOperation.setBegining(stm);
     }
 
-    
+    @Override
     public void setEnding(StateTime stm) {
-       this.stm=stm;
+        stateOperation.setEnding(stm);
     }
 
-    
+    @Override
     public boolean reachBegining() {
-    	Date current=new Date();
-    	return current.after(this.stm.getStartTime());
+        return stateOperation.reachBegining();
     }
 
-    
+    @Override
     public boolean reachEnding() {
-    	Date  current=new Date();
-        return current.after(this.stm.getEndTime());
+        return stateOperation.reachEnding();
+    }
+
+    @Override
+    public void nextState() {
+        context.setState(context.getFrameLaunchingState());
     }
 }

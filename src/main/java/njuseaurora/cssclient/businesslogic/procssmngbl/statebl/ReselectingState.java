@@ -4,37 +4,45 @@
  */
 package njuseaurora.cssclient.businesslogic.procssmngbl.statebl;
 
+import java.util.Date;
 import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.MyState;
 
 /**
  *
  * @author Administrator
  */
-public class ReselectingState implements MyState{
+public class ReselectingState implements MyState {
+
     StateContext context;
     StateTime stm;
-    
-    public ReselectingState(StateContext context){
-        this.context=context;
-    }
+    StateOperation stateOperation;
 
-    
+    public ReselectingState(StateContext context) {
+        this.context = context;
+        stateOperation=new StateOperation(context, stm);
+    }
+   @Override
     public void setBegining(StateTime stm) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        stateOperation.setBegining(stm);
     }
 
-    
+    @Override
     public void setEnding(StateTime stm) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        stateOperation.setEnding(stm);
     }
 
-    
+    @Override
     public boolean reachBegining() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return stateOperation.reachBegining();
     }
 
-    
+    @Override
     public boolean reachEnding() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return stateOperation.reachEnding();
+    }
+
+    @Override
+    public void nextState() {
+        context.setState(context.getDroppingState());
     }
 }

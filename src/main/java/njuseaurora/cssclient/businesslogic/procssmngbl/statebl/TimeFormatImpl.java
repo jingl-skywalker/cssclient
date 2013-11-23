@@ -12,11 +12,10 @@ import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.Time
  *
  * @author Administrator
  */
-public class TimeFormatImpl implements TimeFormat{
+public class TimeFormatImpl implements TimeFormat {
 
     @Override
     public DateFormat getTimeFormat() {
-            return DateFormat.getDateInstance();
+        return DateFormat.getDateInstance();
     }
-    
 }

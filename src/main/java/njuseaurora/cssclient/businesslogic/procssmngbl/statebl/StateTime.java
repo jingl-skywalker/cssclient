@@ -5,6 +5,7 @@
 package njuseaurora.cssclient.businesslogic.procssmngbl.statebl;
 
 import java.util.Date;
+import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.MyState;
 
 /**
  *
@@ -12,13 +13,19 @@ import java.util.Date;
  */
 public class StateTime {
 
+    MyState state;
     private Date startTime;
     private Date endTime;
 
     public StateTime() {
     }
 
-    public StateTime(Date startTime, Date endTime) {
+    public StateTime(MyState state) {
+        this.state = state;
+    }
+
+    public StateTime(MyState state, Date startTime, Date endTime) {
+        this(state);
         this.startTime = startTime;
         this.endTime = endTime;
     }
@@ -38,5 +45,4 @@ public class StateTime {
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
-    
 }

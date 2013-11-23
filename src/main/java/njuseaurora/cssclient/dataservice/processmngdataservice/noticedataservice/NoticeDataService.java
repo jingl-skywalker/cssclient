@@ -8,7 +8,7 @@ import njuseaurora.cssclient.po.processmngpo.NoticePO;
 
 public interface NoticeDataService extends Remote {
 
-	public boolean insert(NoticePO npo) throws RemoteException;
+    public boolean insert(NoticePO npo) throws RemoteException;
 
-	public ArrayList<NoticePO> find() throws RemoteException;
+    public ArrayList<NoticePO> find() throws RemoteException;
 }

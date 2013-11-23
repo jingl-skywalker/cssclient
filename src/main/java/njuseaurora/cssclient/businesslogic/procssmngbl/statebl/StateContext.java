@@ -20,7 +20,7 @@ public class StateContext {
     ReselectingState rss;
     SelectingState sls;
     StartState sts;
-    MyState state = sts;
+    MyState state ;
     int count = 0;
     private volatile static StateContext uniqueContext;
 
@@ -46,7 +46,16 @@ public class StateContext {
         }
         return uniqueContext;
     }
-
+    
+    public void setState(MyState state)
+    {
+        this.state=state;
+    }
+    public MyState getCurrentState()
+    {
+       
+        return this.state;
+    }
     public MyState getCourseLaunchingState() {
         return cls;
     }

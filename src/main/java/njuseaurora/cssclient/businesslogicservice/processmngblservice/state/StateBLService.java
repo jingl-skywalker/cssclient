@@ -4,13 +4,13 @@
  */
 package njuseaurora.cssclient.businesslogicservice.processmngblservice.state;
 
-import java.text.DateFormat;
+import njuseaurora.cssclient.vo.processmngvo.StateVO;
 
 /**
  *
  * @author Administrator
  */
-public interface TimeFormat {
-
-    public DateFormat getTimeFormat();
+public interface StateBLService {
+    public boolean recordState(StateVO svo);
+    public StateVO lookStateInfo(int stateNum);
 }
