@@ -12,14 +12,16 @@ public class GradePO {
 
     private String courseID;
     private String stuID;
+    private String term;
     private double grade;
 
     public GradePO() {
     }
 
-    public GradePO(String courseID, String stuID, double grade) {
+    public GradePO(String courseID, String stuID, String term, double grade) {
         this.courseID = courseID;
         this.stuID = stuID;
+        this.term = term;
         this.grade = grade;
     }
 
@@ -39,6 +41,10 @@ public class GradePO {
         this.stuID = stuID;
     }
 
+    public String getTerm(){
+        return term;
+    }
+    
     public double getGrade() {
         return grade;
     }

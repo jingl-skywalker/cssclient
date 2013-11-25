@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import njuseaurora.cssclient.businesslogicservice.selectionblservice.SelectionBLService;
 import njuseaurora.cssclient.vo.coursevo.CourseVO;
+import njuseaurora.cssclient.vo.selectionvo.SelectionVO;
 import njuseaurora.cssclient.vo.uservo.UserInfoVO;
 
 /**
@@ -64,5 +65,25 @@ public class SelectionBLServiceStub implements SelectionBLService {
     
     public ArrayList<CourseVO> observe() {
         return null;
+    }
+
+    @Override
+    public boolean addCourse(SelectionVO selectionvo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deleteCourse(SelectionVO selectionvo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean quitCourse(SelectionVO selectionvo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean verify() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
