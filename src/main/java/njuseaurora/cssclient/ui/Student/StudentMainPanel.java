@@ -26,6 +26,8 @@ public class StudentMainPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         titelPanel2 = new javax.swing.JPanel();
         peopleLogo2 = new javax.swing.JLabel();
         nameLogo2 = new javax.swing.JLabel();
@@ -39,7 +41,7 @@ public class StudentMainPanel extends javax.swing.JPanel {
         exitLabel2 = new javax.swing.JLabel();
         selectButton = new javax.swing.JButton();
         selectLabel = new javax.swing.JLabel();
-        gradeButton = new javax.swing.JButton();
+        reselectButton = new javax.swing.JButton();
         gradeLabel = new javax.swing.JLabel();
         perCourseButton = new javax.swing.JButton();
         perCourseLabel = new javax.swing.JLabel();
@@ -48,6 +50,10 @@ public class StudentMainPanel extends javax.swing.JPanel {
         perInfoButton = new javax.swing.JButton();
         perInfoLabel = new javax.swing.JLabel();
         notePanel = new javax.swing.JPanel();
+        gradeButton1 = new javax.swing.JButton();
+        gradeLabel1 = new javax.swing.JLabel();
+
+        jScrollPane1.setViewportView(jTextPane1);
 
         setBackground(new java.awt.Color(0, 0, 0));
 
@@ -131,13 +137,23 @@ public class StudentMainPanel extends javax.swing.JPanel {
 
         selectButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         selectButton.setText("select");
+        selectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectButtonActionPerformed(evt);
+            }
+        });
 
         selectLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         selectLabel.setForeground(new java.awt.Color(240, 240, 240));
         selectLabel.setText("选课");
 
-        gradeButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        gradeButton.setText("grade");
+        reselectButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        reselectButton.setText("reselect");
+        reselectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reselectButtonActionPerformed(evt);
+            }
+        });
 
         gradeLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         gradeLabel.setForeground(new java.awt.Color(240, 240, 240));
@@ -145,6 +161,11 @@ public class StudentMainPanel extends javax.swing.JPanel {
 
         perCourseButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         perCourseButton.setText("perCourse");
+        perCourseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perCourseButtonActionPerformed(evt);
+            }
+        });
 
         perCourseLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         perCourseLabel.setForeground(new java.awt.Color(240, 240, 240));
@@ -152,6 +173,11 @@ public class StudentMainPanel extends javax.swing.JPanel {
 
         allCourseButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         allCourseButton.setText("allCourse");
+        allCourseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                allCourseButtonActionPerformed(evt);
+            }
+        });
 
         allCourseLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         allCourseLabel.setForeground(new java.awt.Color(240, 240, 240));
@@ -159,6 +185,11 @@ public class StudentMainPanel extends javax.swing.JPanel {
 
         perInfoButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         perInfoButton.setText("perInfo");
+        perInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perInfoButtonActionPerformed(evt);
+            }
+        });
 
         perInfoLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         perInfoLabel.setForeground(new java.awt.Color(240, 240, 240));
@@ -178,51 +209,67 @@ public class StudentMainPanel extends javax.swing.JPanel {
             .addGap(0, 173, Short.MAX_VALUE)
         );
 
+        gradeButton1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        gradeButton1.setText("grade");
+        gradeButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gradeButton1ActionPerformed(evt);
+            }
+        });
+
+        gradeLabel1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        gradeLabel1.setForeground(new java.awt.Color(240, 240, 240));
+        gradeLabel1.setText("补选");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(titelPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(selectButton)
-                                .addGap(45, 45, 45))
+                                .addGap(12, 12, 12)
+                                .addComponent(selectLabel)))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(reselectButton)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(selectLabel)
-                                .addGap(66, 66, 66)))
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gradeButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(gradeLabel)))
-                        .addGap(57, 57, 57)
+                                .addComponent(gradeLabel1)
+                                .addGap(20, 20, 20)))
+                        .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
+                                .addGap(30, 30, 30)
+                                .addComponent(gradeLabel)
+                                .addGap(57, 57, 57)
                                 .addComponent(perCourseLabel))
-                            .addComponent(perCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(gradeButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(perCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(allCourseLabel))
-                            .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(allCourseLabel)
+                                .addGap(47, 47, 47)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
+                                .addGap(12, 12, 12)
                                 .addComponent(perInfoLabel))
                             .addComponent(perInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,32 +277,55 @@ public class StudentMainPanel extends javax.swing.JPanel {
                 .addComponent(titelPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(selectLabel))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(74, 74, 74)
-                            .addComponent(perInfoLabel))
-                        .addComponent(perInfoButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(reselectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(allCourseLabel))
-                    .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(allCourseLabel)
+                            .addComponent(perCourseLabel)
+                            .addComponent(gradeLabel)
+                            .addComponent(gradeLabel1)
+                            .addComponent(selectLabel)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(perInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(perCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(gradeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(gradeButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(perCourseLabel)
-                            .addComponent(gradeLabel))))
+                        .addComponent(perInfoLabel)))
                 .addGap(18, 18, 18)
                 .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 19, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selectButtonActionPerformed
+
+    private void reselectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reselectButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reselectButtonActionPerformed
+
+    private void perCourseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perCourseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_perCourseButtonActionPerformed
+
+    private void allCourseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allCourseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_allCourseButtonActionPerformed
+
+    private void perInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perInfoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_perInfoButtonActionPerformed
+
+    private void gradeButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gradeButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gradeButton1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton allCourseButton;
     private javax.swing.JLabel allCourseLabel;
@@ -265,10 +335,13 @@ public class StudentMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel currentLogo2;
     private javax.swing.JLabel exitLabel2;
     private javax.swing.JLabel exitLogo2;
-    private javax.swing.JButton gradeButton;
+    private javax.swing.JButton gradeButton1;
     private javax.swing.JLabel gradeLabel;
+    private javax.swing.JLabel gradeLabel1;
     private javax.swing.JLabel homeLabel2;
     private javax.swing.JLabel homeLogo2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel nameLogo2;
     private javax.swing.JPanel notePanel;
     private javax.swing.JLabel peopleLogo2;
@@ -276,6 +349,7 @@ public class StudentMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel perCourseLabel;
     private javax.swing.JButton perInfoButton;
     private javax.swing.JLabel perInfoLabel;
+    private javax.swing.JButton reselectButton;
     private javax.swing.JButton selectButton;
     private javax.swing.JLabel selectLabel;
     private javax.swing.JPanel titelPanel2;

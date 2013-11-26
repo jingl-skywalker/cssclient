@@ -8,7 +8,9 @@ package njuseaurora.cssclient.businesslogic.gradebl;
 
 import java.util.ArrayList;
 import njuseaurora.cssclient.vo.gradevo.GradeVO;
-import njuseaurora.cssclient.vo.uservo.UserInfoVO;
+import njuseaurora.cssclient.po.gradepo.TeacherPO;
+import njuseaurora.cssclient.po.gradepo.GradePO;
+
 
 /**
  *
@@ -17,7 +19,7 @@ import njuseaurora.cssclient.vo.uservo.UserInfoVO;
 public class Teacher {
     private String id;
     private ArrayList<String> courselist;
-    public Teacher(UserInfoVO studentvo){
+    public Teacher(TeacherPO teacherpo){
         
         courselist = new ArrayList<String>();
     }

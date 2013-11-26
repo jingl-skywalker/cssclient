@@ -2,49 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package njuseaurora.cssclient.ui.Student;
-import java.util.ArrayList;
-import java.util.Iterator;
-import javax.swing.table.DefaultTableModel;
-import njuseaurora.cssclient.businesslogicservice.selectionblservice.SelectionBLService;
-import njuseaurora.cssclient.vo.selectionvo.SelectionVO;
-import njuseaurora.cssclient.vo.coursevo.CourseVO;
+package Student;
+
 /**
  *
  * @author zili chen
  */
 public class SelectPanel extends javax.swing.JPanel {
 
-    private String stuID;
-    SelectionBLService selectionbl;
-    ArrayList<CourseVO> totalCourseList;
-    ArrayList<CourseVO> myCourseList;
     /**
      * Creates new form SelectPanel
      */
-    public SelectPanel(String stuID, SelectionBLService selectionbl) {
+    public SelectPanel() {
         initComponents();
-        this.stuID = stuID;
-        this.selectionbl = selectionbl;
-        totalCourseList = selectionbl.getCourseList();
-        myCourseList = selectionbl.getMyCourseList(stuID);
-        
-        
-        Iterator<CourseVO> iterator= myCourseList.iterator();
-        DefaultTableModel tableModel = (DefaultTableModel)selectedListTable.getModel();
-        while(iterator.hasNext()){
-            CourseVO course = iterator.next();
-            tableModel.addRow(new Object[]{course.getCourseID(), course.getCourseName()});
-        }
-        
-        iterator = totalCourseList.iterator();
-        tableModel = (DefaultTableModel)courseListTable.getModel();
-        while(iterator.hasNext()){
-            CourseVO course = iterator.next();
-            tableModel.addRow(new Object[]{course.getCourseID(), course.getCourseName()});
-        }
-        
-        
     }
 
     /**
@@ -332,11 +302,6 @@ public class SelectPanel extends javax.swing.JPanel {
 
         viewInfoButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         viewInfoButton.setText("查看信息");
-        viewInfoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewInfoButtonActionPerformed(evt);
-            }
-        });
 
         selectButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         selectButton.setText("选择课程");
@@ -403,19 +368,9 @@ public class SelectPanel extends javax.swing.JPanel {
 
         dropButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         dropButton.setText("退选");
-        dropButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dropButtonActionPerformed(evt);
-            }
-        });
 
         submitButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         submitButton.setText("提交");
-        submitButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitButtonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout selectedPanelLayout = new javax.swing.GroupLayout(selectedPanel);
         selectedPanel.setLayout(selectedPanelLayout);
@@ -471,19 +426,6 @@ public class SelectPanel extends javax.swing.JPanel {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dropButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropButtonActionPerformed
-        
-    }//GEN-LAST:event_dropButtonActionPerformed
-
-    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_submitButtonActionPerformed
-
-    private void viewInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewInfoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_viewInfoButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel arrowLogo2;
     private javax.swing.JLabel backLabel2;

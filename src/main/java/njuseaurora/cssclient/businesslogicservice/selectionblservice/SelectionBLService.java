@@ -7,6 +7,7 @@ package njuseaurora.cssclient.businesslogicservice.selectionblservice;
 import java.util.ArrayList;
 
 import njuseaurora.cssclient.vo.selectionvo.SelectionVO;
+import njuseaurora.cssclient.vo.coursevo.CourseVO;
 
 /**
  *
@@ -19,6 +20,10 @@ public interface SelectionBLService {
     public boolean deleteCourse(SelectionVO selectionvo);
 
     public boolean quitCourse(SelectionVO selectionvo);
+    
+    public ArrayList<CourseVO> getCourseList();
+    
+    public ArrayList<CourseVO> getMyCourseList(String stuID);
 
     public boolean verify();
 }

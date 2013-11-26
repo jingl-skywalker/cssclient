@@ -8,7 +8,8 @@ package njuseaurora.cssclient.businesslogic.gradebl;
 
 import java.util.ArrayList;
 import njuseaurora.cssclient.vo.gradevo.GradeVO;
-import njuseaurora.cssclient.vo.uservo.UserInfoVO;
+import njuseaurora.cssclient.po.gradepo.StudentPO;
+import njuseaurora.cssclient.po.gradepo.TeacherPO;
 /**
  *
  * @author sheyunfeng
@@ -18,9 +19,9 @@ public class Grade {
     private Teacher teacher = null;
     
     private boolean addStudent(String stuID){
-        UserInfoVO studentvo;
-        if((studentvo = null) == null){    //if((studentvo = getStudent(stuID)) != null)
-            student = new Student(studentvo);
+         StudentPO studentpo;
+        if((studentpo = null) == null){    //if((studentvo = getStudent(stuID)) != null)
+            student = new Student(studentpo);
             return true;
         }
         else 
@@ -36,9 +37,9 @@ public class Grade {
     }
     
     private boolean addTeacher(String teacherID){
-        UserInfoVO teachervo;
-        if((teachervo = null) == null){    //if((teachervo = getTeacher(teacherID)) != null)
-            teacher = new Teacher(teachervo);
+        TeacherPO teacherpo;
+        if((teacherpo = null) == null){    //if((teachervo = getTeacher(teacherID)) != null)
+            teacher = new Teacher(teacherpo);
             return true;
         }
         else 

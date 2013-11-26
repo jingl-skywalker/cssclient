@@ -6,7 +6,9 @@
 
 package njuseaurora.cssclient.businesslogic.selectionbl;
 
+import java.util.ArrayList;
 import njuseaurora.cssclient.businesslogicservice.selectionblservice.SelectionBLService;
+import njuseaurora.cssclient.vo.coursevo.CourseVO;
 import njuseaurora.cssclient.vo.selectionvo.SelectionVO;
 /**
  *
@@ -33,6 +35,16 @@ public class SelectionController implements SelectionBLService{
     
     public boolean verify() {
         return selection.verify();
+    }
+
+    @Override
+    public ArrayList<CourseVO> getCourseList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<CourseVO> getMyCourseList(String stuID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
