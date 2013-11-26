@@ -4,13 +4,15 @@
  */
 package njuseaurora.cssclient.businesslogic.procssmngbl.noticebl;
 
+import businesslogic.procssmngbl.noticebl.Notice;
+import businesslogic.procssmngbl.noticebl.NoticeList;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import njuseaurora.cssclient.businesslogicservice.processmngblservice.notice.NoticeBLService;
-import njuseaurora.cssclient.vo.processmngvo.NoticeVO;
+import businesslogicservice.processmngblservice.notice.NoticeBLService;
+import vo.processmngvo.NoticeVO;
 
 /**
  *

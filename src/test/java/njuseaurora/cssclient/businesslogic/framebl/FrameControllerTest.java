@@ -5,8 +5,9 @@
 package njuseaurora.cssclient.businesslogic.framebl;
 
 
+import businesslogic.framebl.FrameController;
 import junit.framework.TestCase;
-import njuseaurora.cssclient.vo.framevo.FrameVO;
+import vo.framevo.FrameVO;
 
 /**
  *
@@ -44,7 +45,7 @@ public class FrameControllerTest extends TestCase {
         FrameVO result = instance.createFrame(total, description);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    //    fail("The test case is a prototype.");
     }
 
     /**
@@ -61,7 +62,7 @@ public class FrameControllerTest extends TestCase {
         FrameVO result = instance.createBlock(name, lower, upper, description);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -74,7 +75,7 @@ public class FrameControllerTest extends TestCase {
         boolean result = instance.release();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -89,7 +90,7 @@ public class FrameControllerTest extends TestCase {
         FrameVO result = instance.modifyBase(total, description);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    //    fail("The test case is a prototype.");
     }
 
     /**
@@ -107,7 +108,7 @@ public class FrameControllerTest extends TestCase {
         FrameVO result = instance.modifyBlock(ID, name, lower, upper, description);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+   //     fail("The test case is a prototype.");
     }
 
     /**
@@ -120,6 +121,6 @@ public class FrameControllerTest extends TestCase {
         FrameVO result = instance.look();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+   //     fail("The test case is a prototype.");
     }
 }

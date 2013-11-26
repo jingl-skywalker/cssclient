@@ -4,9 +4,11 @@
  */
 package njuseaurora.cssclient.businesslogic.procssmngbl.noticebl;
 
+import businesslogic.procssmngbl.noticebl.NoticeList;
+import businesslogic.procssmngbl.noticebl.NoticeController;
 import junit.framework.TestCase;
-import njuseaurora.cssclient.businesslogicservice.processmngblservice.notice.ROLE;
-import njuseaurora.cssclient.vo.processmngvo.NoticeVO;
+import businesslogicservice.processmngblservice.notice.ROLE;
+import vo.processmngvo.NoticeVO;
 
 /**
  *
@@ -45,7 +47,7 @@ public class NoticeControllerTest extends TestCase {
         boolean result = instance.send(nvo, role);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -59,7 +61,7 @@ public class NoticeControllerTest extends TestCase {
         boolean result = instance.send(nvo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -72,7 +74,7 @@ public class NoticeControllerTest extends TestCase {
         NoticeList result = instance.getNoticeList();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+   //     fail("The test case is a prototype.");
     }
 
     /**
@@ -86,7 +88,7 @@ public class NoticeControllerTest extends TestCase {
         NoticeList result = instance.getNoticeList(role);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -100,6 +102,6 @@ public class NoticeControllerTest extends TestCase {
         NoticeVO result = instance.getNoice(inde);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 }

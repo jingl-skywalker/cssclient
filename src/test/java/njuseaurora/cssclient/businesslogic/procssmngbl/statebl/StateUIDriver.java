@@ -4,22 +4,29 @@
  */
 package njuseaurora.cssclient.businesslogic.procssmngbl.statebl;
 
+import businesslogic.procssmngbl.statebl.TimeFormatImpl;
+import businesslogic.procssmngbl.statebl.StateList;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.MyState;
-import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.TimeFormat;
+import businesslogicservice.processmngblservice.state.MyState;
+import businesslogicservice.processmngblservice.state.StateBLService;
+import businesslogicservice.processmngblservice.state.StateLogicFactory;
+import businesslogicservice.processmngblservice.state.TimeFormat;
+import njuseaurora.cssclient.businesslogic.framebl.FrameUIDriver;
+import vo.processmngvo.StateVO;
 
 /**
  *
  * @author Administrator
  */
 public class StateUIDriver {
-
-    StateContext stateContext;
+    
+    int indexOfState;
+    StateLogicFactory logicFactory=new StateLogicFactory();
+    StateBLService sbls;
     MyState state;
     String startString;
     String endString;
@@ -27,8 +34,11 @@ public class StateUIDriver {
     Date endDate;
 
     public StateUIDriver() {
+        sbls=logicFactory.getStateLogic();
         TimeFormat tf = new TimeFormatImpl();
         DateFormat f1 = tf.getTimeFormat();
+        StateList stateList=new StateList();
+        state=stateList.getState(indexOfState);
         try {
             startDate = f1.parse(startString);
             endDate = f1.parse(endString);
@@ -39,8 +49,18 @@ public class StateUIDriver {
     }
 
     public void startEnsurePressed() {
+        //nothiing
     }
 
     public void endEnsurePressed() {
+        StateVO svo=new StateVO(startDate, endDate, indexOfState);
+        sbls.recordState(svo);
     }
+    public void oneNoticePressed()
+    {
+        StateVO svo=sbls.lookStateInfo(indexOfState);
+        System.out.println(svo.getStateNum()+" "+svo.getStartDate());
+        
+    }
+ 
 }

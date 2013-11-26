@@ -7,8 +7,8 @@ package njuseaurora.cssclient.businesslogic.framebl;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import njuseaurora.cssclient.businesslogicservice.frameblservice.FrameBLService;
-import njuseaurora.cssclient.vo.framevo.FrameVO;
+import businesslogicservice.frameblservice.FrameBLService;
+import vo.framevo.FrameVO;
 
 /**
  *
@@ -83,4 +83,5 @@ public class FrameUIDriver {
     public void releasePressed() {
         fbls.release();
     }
+
 }

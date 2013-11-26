@@ -4,8 +4,9 @@
  */
 package njuseaurora.cssclient.businesslogic.procssmngbl.statebl;
 
+import businesslogic.procssmngbl.statebl.StateContext;
 import junit.framework.TestCase;
-import njuseaurora.cssclient.businesslogicservice.processmngblservice.state.MyState;
+import businesslogicservice.processmngblservice.state.MyState;
 
 /**
  *
@@ -36,7 +37,7 @@ public class StateContextTest extends TestCase {
         StateContext result = StateContext.getStateContext();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ //       fail("The test case is a prototype.");
     }
 
     /**
@@ -49,7 +50,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getCourseLaunchingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -62,7 +63,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getDroppingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -75,7 +76,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getFrameLaunchingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -88,7 +89,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getGradeInState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
 
     /**
@@ -101,7 +102,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getPlanUploadingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ //       fail("The test case is a prototype.");
     }
 
     /**
@@ -114,7 +115,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getReselectingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -127,7 +128,7 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getSelectingState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -140,6 +141,6 @@ public class StateContextTest extends TestCase {
         MyState result = instance.getStartState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 }
