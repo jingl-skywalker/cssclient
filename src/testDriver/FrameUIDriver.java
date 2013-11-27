@@ -2,12 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package njuseaurora.cssclient.businesslogic.framebl;
+package testDriver;
 
+import businesslogic.framebl.FrameController;
+import businesslogicservice.frameblservice.FrameBLService;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import businesslogicservice.frameblservice.FrameBLService;
 import vo.framevo.FrameVO;
 
 /**
@@ -15,8 +16,7 @@ import vo.framevo.FrameVO;
  * @author Administrator
  */
 public class FrameUIDriver {
-
-    JButton newFbt;
+       JButton newFbt;
     JButton newBbt;
     JButton releaseBt;
     JButton finishBbt;
@@ -41,7 +41,8 @@ public class FrameUIDriver {
         frameInfoArea = new JTextArea("Information just for test.\r\n--njwu-css-client-by -aurora-njuse");
         blockNameField = new JTextField("block1");
         blockInfoArea = new JTextArea("block info just for test.\r\n njwu-css-client");
-
+        this.fbls=new FrameController();
+        System.out.println("client ui driver");
     }
 
     FrameUIDriver(FrameBLService fbls) {
@@ -58,6 +59,7 @@ public class FrameUIDriver {
             System.out.println("test/frameui/parsetotal error");
         }
         String frameinfo = frameInfoArea.getText();
+        System.out.println(total+" "+frameinfo);
         fvo = fbls.createFrame(total, frameinfo);
     }
 

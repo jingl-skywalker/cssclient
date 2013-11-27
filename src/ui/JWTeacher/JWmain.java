@@ -4,8 +4,6 @@
  */
 package ui.JWTeacher;
 
-import Library.RoundBorder;
-
 /**
  *
  * @author zili chen
@@ -183,11 +181,6 @@ public class JWmain extends javax.swing.JFrame {
 
         frameButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         frameButton.setText("frame");
-        frameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                frameButtonActionPerformed(evt);
-            }
-        });
 
         staticsButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         staticsButton.setText("statics");
@@ -383,14 +376,6 @@ public class JWmain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ExitButtonActionPerformed
 
-    private void frameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frameButtonActionPerformed
-        // TODO add your handling code here:
-        jwMainPanel.setVisible(false); 
-        backPanel.add(framepanel,0,0);
-        framepanel.setBounds(0,570-349,889,349);
-        framepanel.setVisible(true);
-    }//GEN-LAST:event_frameButtonActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -455,23 +440,19 @@ public class JWmain extends javax.swing.JFrame {
     private javax.swing.JLabel staticsLabel;
     private javax.swing.JPanel titelPanel;
     // End of variables declaration//GEN-END:variables
-    private FramePanel framepanel;
+
 
     /**
-     * Get the value of framepanel
+     * Get the value of framePamel
      *
-     * @return the value of framepanel
+     * @return the value of framePamel
      */
-    public FramePanel getFramepanel() {
-        return framepanel;
-    }
+  
 
     /**
-     * Set the value of framepanel
+     * Set the value of framePamel
      *
-     * @param framepanel new value of framepanel
+     * @param framePamel new value of framePamel
      */
-    public void setFramepanel(FramePanel framepanel) {
-        this.framepanel = framepanel;
-    }
+
 }
