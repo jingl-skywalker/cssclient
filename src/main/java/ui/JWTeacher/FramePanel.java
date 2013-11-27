@@ -4,25 +4,19 @@
  */
 package ui.JWTeacher;
 
-import businesslogicservice.frameblservice.FrameBLService;
-import businesslogicservice.frameblservice.FrameOperationFactory;
-import ui.Library.RoundBorder;
-import vo.framevo.FrameVO;
+import Library.RoundBorder;
 
 /**
  *
  * @author zili chen
  */
 public class FramePanel extends javax.swing.JPanel {
-    private FrameVO fvo;
 
     /**
      * Creates new form FramePanel
      */
     public FramePanel() {
         initComponents();
-      //  setLayout(null);
-  //      framebl=blfactory.createFrameBL();
     }
 
     /**
@@ -143,11 +137,6 @@ public class FramePanel extends javax.swing.JPanel {
         createButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         createButton.setText("创建");
         createButton.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true)));
-        createButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createButtonActionPerformed(evt);
-            }
-        });
 
         launchButton.setBackground(new java.awt.Color(0, 0, 0));
         launchButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
@@ -246,14 +235,14 @@ public class FramePanel extends javax.swing.JPanel {
         modulePanel1Layout.setHorizontalGroup(
             modulePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modulePanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(addModuleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
         modulePanel1Layout.setVerticalGroup(
             modulePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modulePanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(24, 24, 24)
                 .addComponent(addModuleButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -271,8 +260,8 @@ public class FramePanel extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addComponent(descriPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
-                .addComponent(modulePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(modulePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,8 +274,8 @@ public class FramePanel extends javax.swing.JPanel {
                         .addComponent(createButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(launchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(descriPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modulePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(modulePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(descriPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -294,19 +283,6 @@ public class FramePanel extends javax.swing.JPanel {
     private void launchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_launchButtonActionPerformed
-
-    private void createButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createButtonActionPerformed
-        // TODO add your handling code here:
-        String totalString=creditTextField.getText();
-        int total = 0;
-        try {
-            total=Integer.parseInt(totalString);
-        } catch (Exception e) {
-        }
-        String frameInfo=descriTextArea.getText();
-        fvo=framebl.createFrame(total, frameInfo);
-        
-    }//GEN-LAST:event_createButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addModuleButton;
@@ -333,42 +309,4 @@ public class FramePanel extends javax.swing.JPanel {
     private javax.swing.JLabel peopleLogo;
     private javax.swing.JPanel titelPanel;
     // End of variables declaration//GEN-END:variables
-    private FrameBLService framebl;
-    private FrameOperationFactory blfactory;
-
-    /**
-     * Set the value of framebl
-     *
-     * @param framebl new value of framebl
-     */
-    public void setFramebl(FrameBLService framebl) {
-        this.framebl = framebl;
-    }
-
-
-    /**
-     * Set the value of frameblservice
-     *
-     * @param frameblservice new value of frameblservice
-     */
-
-    private FrameVO FrameVO = fvo;
-
-    /**
-     * Get the value of FrameVO
-     *
-     * @return the value of FrameVO
-     */
-    public FrameVO getFrameVO() {
-        return FrameVO;
-    }
-
-    /**
-     * Set the value of FrameVO
-     *
-     * @param FrameVO new value of FrameVO
-     */
-    public void setFrameVO(FrameVO FrameVO) {
-        this.FrameVO = FrameVO;
-    }
 }

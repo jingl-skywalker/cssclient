@@ -2,18 +2,18 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.Student;
+package njuseaurora.cssclient.ui.Student;
 
 /**
  *
  * @author zili chen
  */
-public class StudentMainPanel extends javax.swing.JPanel {
+public class STUmain extends javax.swing.JFrame {
 
     /**
-     * Creates new form StudentMainPanel
+     * Creates new form STUmain
      */
-    public StudentMainPanel() {
+    public STUmain() {
         initComponents();
     }
 
@@ -26,6 +26,12 @@ public class StudentMainPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        backPanel = new javax.swing.JPanel();
+        CSSLabel = new javax.swing.JLabel();
+        NJWUPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        ExitButton = new javax.swing.JButton();
+        stuMainPanel = new javax.swing.JPanel();
         titelPanel2 = new javax.swing.JPanel();
         peopleLogo2 = new javax.swing.JLabel();
         nameLogo2 = new javax.swing.JLabel();
@@ -49,7 +55,49 @@ public class StudentMainPanel extends javax.swing.JPanel {
         perInfoLabel = new javax.swing.JLabel();
         notePanel = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(0, 0, 0));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        backPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+        CSSLabel.setFont(new java.awt.Font("微软雅黑", 1, 24)); // NOI18N
+        CSSLabel.setForeground(new java.awt.Color(255, 255, 255));
+        CSSLabel.setText("CSS");
+
+        NJWUPanel.setBackground(new java.awt.Color(233, 233, 237));
+        NJWUPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("微软雅黑", 1, 48)); // NOI18N
+        jLabel1.setText("NJWU选课系统");
+
+        javax.swing.GroupLayout NJWUPanelLayout = new javax.swing.GroupLayout(NJWUPanel);
+        NJWUPanel.setLayout(NJWUPanelLayout);
+        NJWUPanelLayout.setHorizontalGroup(
+            NJWUPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NJWUPanelLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        NJWUPanelLayout.setVerticalGroup(
+            NJWUPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NJWUPanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        ExitButton.setBackground(new java.awt.Color(0, 0, 0));
+        ExitButton.setFont(new java.awt.Font("微软雅黑", 1, 24)); // NOI18N
+        ExitButton.setForeground(new java.awt.Color(255, 255, 255));
+        ExitButton.setText("X");
+        ExitButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ExitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitButtonActionPerformed(evt);
+            }
+        });
+
+        stuMainPanel.setBackground(new java.awt.Color(0, 0, 0));
 
         titelPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         titelPanel2.setPreferredSize(new java.awt.Dimension(365, 37));
@@ -97,7 +145,7 @@ public class StudentMainPanel extends javax.swing.JPanel {
                 .addComponent(arrowLogo2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(currentLogo2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(backLogo2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(backLabel2)
@@ -178,90 +226,171 @@ public class StudentMainPanel extends javax.swing.JPanel {
             .addGap(0, 173, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout stuMainPanelLayout = new javax.swing.GroupLayout(stuMainPanel);
+        stuMainPanel.setLayout(stuMainPanelLayout);
+        stuMainPanelLayout.setHorizontalGroup(
+            stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(titelPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+            .addGroup(stuMainPanelLayout.createSequentialGroup()
+                .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(stuMainPanelLayout.createSequentialGroup()
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(stuMainPanelLayout.createSequentialGroup()
                                 .addGap(61, 61, 61)
                                 .addComponent(selectButton)
                                 .addGap(45, 45, 45))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, stuMainPanelLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(selectLabel)
                                 .addGap(66, 66, 66)))
                         .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(gradeButton)
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(stuMainPanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(gradeLabel)))
                         .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(stuMainPanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(perCourseLabel))
                             .addComponent(perCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(stuMainPanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(allCourseLabel))
                             .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(stuMainPanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(perInfoLabel))
                             .addComponent(perInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(stuMainPanelLayout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        stuMainPanelLayout.setVerticalGroup(
+            stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stuMainPanelLayout.createSequentialGroup()
                 .addComponent(titelPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
+                .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(stuMainPanelLayout.createSequentialGroup()
                             .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(selectLabel))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, stuMainPanelLayout.createSequentialGroup()
                             .addGap(74, 74, 74)
                             .addComponent(perInfoLabel))
                         .addComponent(perInfoButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(stuMainPanelLayout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(allCourseLabel))
                     .addComponent(allCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(stuMainPanelLayout.createSequentialGroup()
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(perCourseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(gradeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(stuMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(perCourseLabel)
                             .addComponent(gradeLabel))))
                 .addGap(18, 18, 18)
                 .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 19, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout backPanelLayout = new javax.swing.GroupLayout(backPanel);
+        backPanel.setLayout(backPanelLayout);
+        backPanelLayout.setHorizontalGroup(
+            backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(CSSLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ExitButton)
+                .addGap(21, 21, 21))
+            .addComponent(NJWUPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(stuMainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        backPanelLayout.setVerticalGroup(
+            backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backPanelLayout.createSequentialGroup()
+                .addGroup(backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CSSLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addComponent(NJWUPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(stuMainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExitButtonActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(STUmain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(STUmain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(STUmain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(STUmain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new STUmain().setVisible(true);
+            }
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CSSLabel;
+    private javax.swing.JButton ExitButton;
+    private javax.swing.JPanel NJWUPanel;
     private javax.swing.JButton allCourseButton;
     private javax.swing.JLabel allCourseLabel;
     private javax.swing.JLabel arrowLogo2;
     private javax.swing.JLabel backLabel2;
     private javax.swing.JLabel backLogo2;
+    private javax.swing.JPanel backPanel;
     private javax.swing.JLabel currentLogo2;
     private javax.swing.JLabel exitLabel2;
     private javax.swing.JLabel exitLogo2;
@@ -269,6 +398,7 @@ public class StudentMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel gradeLabel;
     private javax.swing.JLabel homeLabel2;
     private javax.swing.JLabel homeLogo2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel nameLogo2;
     private javax.swing.JPanel notePanel;
     private javax.swing.JLabel peopleLogo2;
@@ -278,6 +408,7 @@ public class StudentMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel perInfoLabel;
     private javax.swing.JButton selectButton;
     private javax.swing.JLabel selectLabel;
+    private javax.swing.JPanel stuMainPanel;
     private javax.swing.JPanel titelPanel2;
     // End of variables declaration//GEN-END:variables
 }

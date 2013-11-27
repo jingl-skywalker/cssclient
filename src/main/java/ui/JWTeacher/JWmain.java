@@ -4,6 +4,8 @@
  */
 package ui.JWTeacher;
 
+import Library.RoundBorder;
+
 /**
  *
  * @author zili chen
@@ -15,8 +17,6 @@ public class JWmain extends javax.swing.JFrame {
      */
     public JWmain() {
         initComponents();
-        setLocationRelativeTo(null);
-//        jWMainPanel1.setContainer(this);
     }
 
     /**
@@ -33,11 +33,32 @@ public class JWmain extends javax.swing.JFrame {
         ExitButton = new javax.swing.JButton();
         NJWUPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        framePanel1 = new ui.JWTeacher.FramePanel();
+        jwMainPanel = new javax.swing.JPanel();
+        titelPanel = new javax.swing.JPanel();
+        peopleLogo = new javax.swing.JLabel();
+        nameLogo = new javax.swing.JLabel();
+        arrowLogo = new javax.swing.JLabel();
+        currentLogo = new javax.swing.JLabel();
+        backLogo = new javax.swing.JLabel();
+        backLabel = new javax.swing.JLabel();
+        homeLogo = new javax.swing.JLabel();
+        homeLabel = new javax.swing.JLabel();
+        exitLogo = new javax.swing.JLabel();
+        exitLabel = new javax.swing.JLabel();
+        frameButton = new javax.swing.JButton();
+        staticsButton = new javax.swing.JButton();
+        processButton = new javax.swing.JButton();
+        personButton = new javax.swing.JButton();
+        frameLabel = new javax.swing.JLabel();
+        planLabel = new javax.swing.JLabel();
+        staticsLabel = new javax.swing.JLabel();
+        processLabel = new javax.swing.JLabel();
+        personLabel = new javax.swing.JLabel();
+        notePanel = new javax.swing.JPanel();
+        planButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setUndecorated(true);
 
         backPanel.setBackground(new java.awt.Color(0, 0, 0));
         backPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -52,11 +73,6 @@ public class JWmain extends javax.swing.JFrame {
         ExitButton.setForeground(new java.awt.Color(255, 255, 255));
         ExitButton.setText("X");
         ExitButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exitCliked(evt);
-            }
-        });
         ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitButtonActionPerformed(evt);
@@ -76,9 +92,6 @@ public class JWmain extends javax.swing.JFrame {
             .addGroup(NJWUPanelLayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jLabel1)
-                .addContainerGap(629, Short.MAX_VALUE))
-            .addGroup(NJWUPanelLayout.createSequentialGroup()
-                .addComponent(framePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         NJWUPanelLayout.setVerticalGroup(
@@ -86,10 +99,230 @@ public class JWmain extends javax.swing.JFrame {
             .addGroup(NJWUPanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(52, 52, 52)
-                .addComponent(framePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
+
+        jwMainPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+        titelPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        peopleLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        peopleLogo.setText("Logo");
+
+        nameLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        nameLogo.setText("name");
+
+        arrowLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        arrowLogo.setText("->");
+
+        currentLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        currentLogo.setText("current");
+
+        backLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        backLogo.setText("Logo");
+
+        backLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        backLabel.setText("back");
+
+        homeLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        homeLogo.setText("Logo");
+
+        homeLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        homeLabel.setText("home");
+
+        exitLogo.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        exitLogo.setText("Logo");
+
+        exitLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        exitLabel.setText("exit");
+
+        javax.swing.GroupLayout titelPanelLayout = new javax.swing.GroupLayout(titelPanel);
+        titelPanel.setLayout(titelPanelLayout);
+        titelPanelLayout.setHorizontalGroup(
+            titelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titelPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(peopleLogo)
+                .addGap(18, 18, 18)
+                .addComponent(nameLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(arrowLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(currentLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(backLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backLabel)
+                .addGap(18, 18, 18)
+                .addComponent(homeLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeLabel)
+                .addGap(18, 18, 18)
+                .addComponent(exitLogo)
+                .addGap(5, 5, 5)
+                .addComponent(exitLabel)
+                .addContainerGap())
+        );
+        titelPanelLayout.setVerticalGroup(
+            titelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titelPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(titelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(peopleLogo)
+                    .addComponent(nameLogo)
+                    .addComponent(arrowLogo)
+                    .addComponent(currentLogo)
+                    .addComponent(backLogo)
+                    .addComponent(backLabel)
+                    .addComponent(homeLogo)
+                    .addComponent(homeLabel)
+                    .addComponent(exitLogo)
+                    .addComponent(exitLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        frameButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        frameButton.setText("frame");
+        frameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                frameButtonActionPerformed(evt);
+            }
+        });
+
+        staticsButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        staticsButton.setText("statics");
+        staticsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticsButtonActionPerformed(evt);
+            }
+        });
+
+        processButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        processButton.setText("process");
+        processButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                processButtonActionPerformed(evt);
+            }
+        });
+
+        personButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        personButton.setText("person");
+        personButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personButtonActionPerformed(evt);
+            }
+        });
+
+        frameLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        frameLabel.setForeground(new java.awt.Color(240, 240, 240));
+        frameLabel.setText("教学框架");
+
+        planLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        planLabel.setForeground(new java.awt.Color(240, 240, 240));
+        planLabel.setText("教学计划");
+
+        staticsLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        staticsLabel.setForeground(new java.awt.Color(240, 240, 240));
+        staticsLabel.setText("统计数据");
+
+        processLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        processLabel.setForeground(new java.awt.Color(240, 240, 240));
+        processLabel.setText("进程管理");
+
+        personLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        personLabel.setForeground(new java.awt.Color(240, 240, 240));
+        personLabel.setText("个人信息");
+
+        notePanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        notePanel.setToolTipText("");
+
+        javax.swing.GroupLayout notePanelLayout = new javax.swing.GroupLayout(notePanel);
+        notePanel.setLayout(notePanelLayout);
+        notePanelLayout.setHorizontalGroup(
+            notePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 579, Short.MAX_VALUE)
+        );
+        notePanelLayout.setVerticalGroup(
+            notePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 173, Short.MAX_VALUE)
+        );
+
+        planButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        planButton.setText("plan");
+        planButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                planButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jwMainPanelLayout = new javax.swing.GroupLayout(jwMainPanel);
+        jwMainPanel.setLayout(jwMainPanelLayout);
+        jwMainPanelLayout.setHorizontalGroup(
+            jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(titelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jwMainPanelLayout.createSequentialGroup()
+                        .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(frameButton)
+                            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(frameLabel)))
+                        .addGap(42, 42, 42)
+                        .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(planLabel))
+                            .addComponent(planButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(172, 172, 172)
+                        .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(processButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(processLabel)))
+                        .addGap(51, 51, 51)
+                        .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(personLabel))
+                            .addComponent(personButton))))
+                .addContainerGap(261, Short.MAX_VALUE))
+            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                .addGap(291, 291, 291)
+                .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(staticsLabel)
+                    .addComponent(staticsButton))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jwMainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {frameButton, personButton, planButton, processButton});
+
+        jwMainPanelLayout.setVerticalGroup(
+            jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jwMainPanelLayout.createSequentialGroup()
+                .addComponent(titelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(frameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(planButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staticsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(processButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(personButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jwMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(personLabel)
+                    .addComponent(processLabel)
+                    .addComponent(frameLabel)
+                    .addComponent(planLabel)
+                    .addComponent(staticsLabel))
+                .addGap(31, 31, 31)
+                .addComponent(notePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        jwMainPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {frameButton, personButton, planButton, processButton, staticsButton});
 
         javax.swing.GroupLayout backPanelLayout = new javax.swing.GroupLayout(backPanel);
         backPanel.setLayout(backPanelLayout);
@@ -102,6 +335,7 @@ public class JWmain extends javax.swing.JFrame {
                 .addComponent(ExitButton)
                 .addGap(21, 21, 21))
             .addComponent(NJWUPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jwMainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         backPanelLayout.setVerticalGroup(
             backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,33 +345,51 @@ public class JWmain extends javax.swing.JFrame {
                     .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
                 .addComponent(NJWUPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jwMainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1043, Short.MAX_VALUE)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(backPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void planButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_planButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_planButtonActionPerformed
+
+    private void personButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personButtonActionPerformed
+
+    private void processButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_processButtonActionPerformed
+
+    private void staticsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_staticsButtonActionPerformed
+
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ExitButtonActionPerformed
 
-    private void exitCliked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitCliked
+    private void frameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frameButtonActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_exitCliked
+        jwMainPanel.setVisible(false); 
+        backPanel.add(framepanel,0,0);
+        framepanel.setBounds(0,570-349,889,349);
+        framepanel.setVisible(true);
+    }//GEN-LAST:event_frameButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,8 +429,49 @@ public class JWmain extends javax.swing.JFrame {
     private javax.swing.JLabel CSSLabel;
     private javax.swing.JButton ExitButton;
     private javax.swing.JPanel NJWUPanel;
+    private javax.swing.JLabel arrowLogo;
+    private javax.swing.JLabel backLabel;
+    private javax.swing.JLabel backLogo;
     private javax.swing.JPanel backPanel;
-    private ui.JWTeacher.FramePanel framePanel1;
+    private javax.swing.JLabel currentLogo;
+    private javax.swing.JLabel exitLabel;
+    private javax.swing.JLabel exitLogo;
+    private javax.swing.JButton frameButton;
+    private javax.swing.JLabel frameLabel;
+    private javax.swing.JLabel homeLabel;
+    private javax.swing.JLabel homeLogo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jwMainPanel;
+    private javax.swing.JLabel nameLogo;
+    private javax.swing.JPanel notePanel;
+    private javax.swing.JLabel peopleLogo;
+    private javax.swing.JButton personButton;
+    private javax.swing.JLabel personLabel;
+    private javax.swing.JButton planButton;
+    private javax.swing.JLabel planLabel;
+    private javax.swing.JButton processButton;
+    private javax.swing.JLabel processLabel;
+    private javax.swing.JButton staticsButton;
+    private javax.swing.JLabel staticsLabel;
+    private javax.swing.JPanel titelPanel;
     // End of variables declaration//GEN-END:variables
+    private FramePanel framepanel;
+
+    /**
+     * Get the value of framepanel
+     *
+     * @return the value of framepanel
+     */
+    public FramePanel getFramepanel() {
+        return framepanel;
+    }
+
+    /**
+     * Set the value of framepanel
+     *
+     * @param framepanel new value of framepanel
+     */
+    public void setFramepanel(FramePanel framepanel) {
+        this.framepanel = framepanel;
+    }
 }

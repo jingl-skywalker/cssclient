@@ -15,6 +15,7 @@ public class StaticsPanel extends javax.swing.JPanel {
      */
     public StaticsPanel() {
         initComponents();
+        
     }
 
     /**
@@ -503,4 +504,82 @@ public class StaticsPanel extends javax.swing.JPanel {
     private javax.swing.JTextField termTextField18;
     private javax.swing.JPanel titelPanel;
     // End of variables declaration//GEN-END:variables
+    private SendMsgPanel noticePanel;
+    private ProcessMainPanel processmainPanel;
+    private SetTimePanel statePanel;
+
+    /**
+     * Get the value of statePanel
+     *
+     * @return the value of statePanel
+     */
+    public SetTimePanel getStatePanel() {
+        return statePanel;
+    }
+
+    /**
+     * Set the value of statePanel
+     *
+     * @param statePanel new value of statePanel
+     */
+    public void setStatePanel(SetTimePanel statePanel) {
+        this.statePanel = statePanel;
+    }
+
+
+    /**
+     * Get the value of processmainPanel
+     *
+     * @return the value of processmainPanel
+     */
+    public ProcessMainPanel getProcessmainPanel() {
+        return processmainPanel;
+    }
+
+    /**
+     * Set the value of processmainPanel
+     *
+     * @param processmainPanel new value of processmainPanel
+     */
+    public void setProcessmainPanel(ProcessMainPanel processmainPanel) {
+        this.processmainPanel = processmainPanel;
+    }
+
+
+    /**
+     * Get the value of noticePanel
+     *
+     * @return the value of noticePanel
+     */
+    public SendMsgPanel getNoticePanel() {
+        return noticePanel;
+    }
+
+    /**
+     * Set the value of noticePanel
+     *
+     * @param noticePanel new value of noticePanel
+     */
+    public void setNoticePanel(SendMsgPanel noticePanel) {
+        this.noticePanel = noticePanel;
+    }
+    private FramePanel framePanel;
+
+    /**
+     * Get the value of framePanel
+     *
+     * @return the value of framePanel
+     */
+    public FramePanel getFramePanel() {
+        return framePanel;
+    }
+
+    /**
+     * Set the value of framePanel
+     *
+     * @param framePanel new value of framePanel
+     */
+    public void setFramePanel(FramePanel framePanel) {
+        this.framePanel = framePanel;
+    }
 }
