@@ -2,11 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package njuseaurora.cssclient.ui.YJWTeacher;
+package  ui.YJWTeacher;
 
 import java.awt.Color;
 import java.awt.Font;
-import njuseaurora.cssclient.ui.Library.MyTitledBorder;
+import  ui.Library.MyTitledBorder;
 
 /**
  *

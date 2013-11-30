@@ -4,7 +4,7 @@
  */
 package ui.JWTeacher;
 
-import Library.RoundBorder;
+import ui.Library.RoundBorder;
 
 /**
  *

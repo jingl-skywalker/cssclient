@@ -2,21 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package njuseaurora.cssclient.ui.Library;
+package  ui.Library;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Serializable;
 import java.util.Vector;
-import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JList;
-import javax.swing.ListCellRenderer;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 
 /**
  *

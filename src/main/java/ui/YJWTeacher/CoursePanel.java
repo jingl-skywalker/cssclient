@@ -2,15 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package njuseaurora.cssclient.ui.YJWTeacher;
+package  ui.YJWTeacher;
 
 import java.awt.Font;
 import java.awt.GridBagConstraints;
-import njuseaurora.cssclient.ui.Library.CheckListCellRenderer;
-import njuseaurora.cssclient.ui.Library.CheckValue;
-import njuseaurora.cssclient.ui.Library.FullComboBox;
-import njuseaurora.cssclient.ui.Library.MyComboBox;
-import njuseaurora.cssclient.ui.Library.MyTitledBorder;
+import  ui.Library.CheckListCellRenderer;
+import  ui.Library.CheckValue;
+import  ui.Library.FullComboBox;
+import  ui.Library.MyComboBox;
+import  ui.Library.MyTitledBorder;
 
 
 /**
