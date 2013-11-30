@@ -162,6 +162,8 @@ public class ProcessMainPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         cardLayout.show(containPanel,"msgP");
         isProcess = true;
+        msgPanel.refreshNoticelistUI();
+   //     msgPanel.nbls.initNotices();
     }//GEN-LAST:event_messageButtonActionPerformed
 
     private void timeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeButtonActionPerformed

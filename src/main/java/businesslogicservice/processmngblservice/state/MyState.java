@@ -4,7 +4,7 @@
  */
 package businesslogicservice.processmngblservice.state;
 
-import businesslogic.procssmngbl.statebl.StateTime;
+import businesslogic.processmngbl.statebl.StateTime;
 
 /**
  *
@@ -21,6 +21,20 @@ public interface MyState {
     public boolean reachEnding();
 
     public void nextState();
-    
+
     public int getStateNum();
+
+    public boolean canLaunchFrame();
+
+    public boolean canInputPlaan();
+
+    public boolean canLaunchCourse();
+
+    public boolean canSelectCourse();
+
+    public boolean canDropCourse();
+
+    public boolean canReselectCoruse();
+
+    public boolean canRecordGrade();
 }

@@ -5,6 +5,8 @@
 package dataservice.datafactory;
 
 import data.framedata.FrameData;
+import data.processmngdata.noticedata.NoticeData;
+import data.processmngdata.statedata.StateData;
 import dataservice.framedataservice.FrameDataService;
 import dataservice.gradedataservice.GradeDataService;
 import dataservice.plandataservice.PlanDataService;
@@ -33,12 +35,12 @@ public class DataFactoryImpl extends UnicastRemoteObject implements DataFactory{
 
     @Override
     public StateDataService getStateData() throws RemoteException {
-      return null;
+      return new StateData();
     }
 
     @Override
     public NoticeDataService getNoticeData() throws RemoteException {
-        return null;
+        return new NoticeData();
     }
 
     @Override

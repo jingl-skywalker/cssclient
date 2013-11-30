@@ -4,15 +4,15 @@
  */
 package businesslogicservice.processmngblservice.state;
 
-import businesslogic.procssmngbl.statebl.StateController;
+import businesslogic.processmngbl.statebl.StateController;
 
 /**
  *
  * @author Administrator
  */
 public class StateLogicFactory {
-    public StateBLService getStateLogic()
-    {
+
+    public StateBLService getStateLogic() {
         return new StateController();
     }
 }

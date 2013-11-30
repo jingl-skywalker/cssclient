@@ -19,7 +19,8 @@ public class StateData extends UnicastRemoteObject implements StateDataService {
 
     FileUtility fileUtility = new FileutilityImpl("src/main/resources/state.txt");
 
-    StateData() throws RemoteException {
+    public StateData() throws RemoteException {
+        System.out.println("state data constr");
     }
 
     @Override

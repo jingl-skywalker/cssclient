@@ -4,7 +4,7 @@
  */
 package businesslogicservice.processmngblservice.notice;
 
-import businesslogic.procssmngbl.noticebl.NoticeList;
+import businesslogic.processmngbl.noticebl.NoticeList;
 import vo.processmngvo.NoticeVO;
 
 /**
@@ -22,4 +22,6 @@ public interface NoticeBLService {
     public NoticeList getNoticeList(ROLE role);
 
     public NoticeVO getNoice(int inde);
+    
+    public void initNotices();
 }

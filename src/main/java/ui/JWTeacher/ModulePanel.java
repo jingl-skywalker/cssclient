@@ -4,17 +4,24 @@
  */
 package ui.JWTeacher;
 
+import businesslogicservice.frameblservice.FrameBLService;
+import vo.framevo.BlockVO;
+
 /**
  *
  * @author zili chen
  */
 public class ModulePanel extends javax.swing.JPanel {
-
+    FrameBLService frameBLService;
     /**
      * Creates new form ModulePanel
      */
     public ModulePanel() {
         initComponents();
+    }
+    public ModulePanel(FrameBLService frameBLService){
+        this();
+        this.frameBLService=frameBLService;
     }
 
     /**
@@ -96,6 +103,11 @@ public class ModulePanel extends javax.swing.JPanel {
 
         sureButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         sureButton.setText("确认");
+        sureButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sureButtonActionPerformed(evt);
+            }
+        });
 
         cancelButton.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         cancelButton.setText("取消");
@@ -163,6 +175,22 @@ public class ModulePanel extends javax.swing.JPanel {
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void sureButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sureButtonActionPerformed
+        // TODO add your handling code here:
+        String name=nameTextField.getText();
+        String content=moduleTextArea.getText();
+        String upString=upComboBox.getToolTipText();
+        String lowerString=downComboBox.getToolTipText();
+        int up=0;
+        int low=0;
+        try {
+            up=Integer.parseInt(upString);
+            low=Integer.parseInt(lowerString);
+        } catch (Exception e) {
+        }
+        frameBLService.createBlock(name, low, up, content);
+    }//GEN-LAST:event_sureButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;

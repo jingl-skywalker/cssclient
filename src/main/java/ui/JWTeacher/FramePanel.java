@@ -4,10 +4,8 @@
  */
 package ui.JWTeacher;
 
-import Library.RoundBorder;
 import businesslogicservice.frameblservice.FrameBLService;
 import businesslogicservice.frameblservice.FrameOperationFactory;
-import vo.framevo.FrameVO;
 
 /**
  *
@@ -24,6 +22,7 @@ public class FramePanel extends javax.swing.JPanel {
         initComponents();
         factory=new FrameOperationFactory();
         frameBLService=factory.createFrameBL();
+        
     }
 
     /**
@@ -47,6 +46,7 @@ public class FramePanel extends javax.swing.JPanel {
         descriTextArea = new javax.swing.JTextArea();
         modulePanel1 = new javax.swing.JPanel();
         addModuleButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(889, 394));
@@ -156,20 +156,38 @@ public class FramePanel extends javax.swing.JPanel {
         addModuleButton.setText("+");
         addModuleButton.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true)));
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 207, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 125, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout modulePanel1Layout = new javax.swing.GroupLayout(modulePanel1);
         modulePanel1.setLayout(modulePanel1Layout);
         modulePanel1Layout.setHorizontalGroup(
             modulePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modulePanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(addModuleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addGroup(modulePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modulePanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(addModuleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(modulePanel1Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         modulePanel1Layout.setVerticalGroup(
             modulePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modulePanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(addModuleButton)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -231,6 +249,7 @@ public class FramePanel extends javax.swing.JPanel {
     private javax.swing.JPanel descriPanel;
     private javax.swing.JTextArea descriTextArea;
     private javax.swing.JLabel emptyLabel;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton launchButton;
     private javax.swing.JPanel modulePanel1;

@@ -4,7 +4,7 @@
  */
 package businesslogicservice.processmngblservice.notice;
 
-import businesslogic.procssmngbl.noticebl.NoticeList;
+import businesslogic.processmngbl.noticebl.NoticeList;
 
 /**
  *

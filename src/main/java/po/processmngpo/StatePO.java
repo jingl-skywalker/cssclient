@@ -1,16 +1,17 @@
 package po.processmngpo;
 
-import businesslogic.procssmngbl.statebl.TimeFormatImpl;
+import businesslogic.processmngbl.statebl.TimeFormatImpl;
 import businesslogicservice.processmngblservice.state.TimeFormat;
+import java.io.Serializable;
 import java.util.Date;
 import vo.processmngvo.StateVO;
 
-public class StatePO {
+public class StatePO implements  Serializable{
 
     private Date startDate;
     private Date endDate;
     private int stateNum;
-    private String SEP = "$";
+    private String SEP = "@";
     private String startString;
     private String endString;
 

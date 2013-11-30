@@ -16,6 +16,7 @@ public class FrameData extends UnicastRemoteObject implements FrameDataService {
     FileUtility utility = new FileutilityImpl("src/main/resources/frame.txt");
 
     public FrameData() throws RemoteException {
+        System.out.println("frame data constructor");
     }
 
     @Override
@@ -28,6 +29,7 @@ public class FrameData extends UnicastRemoteObject implements FrameDataService {
     @Override
     public void update(FramePO fpo) throws RemoteException {
         // TODO Auto-generated method stub
+        System.out.println(" frame data update");
         utility.clear();
         utility.append(fpo.toStoreString());
     }

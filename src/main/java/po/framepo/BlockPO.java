@@ -5,12 +5,13 @@
 package po.framepo;
 
 import businesslogic.framebl.Block;
+import java.io.Serializable;
 
 /**
  *
  * @author Administrator
  */
-public class BlockPO {
+public class BlockPO implements  Serializable{
 
     private String name;
     private String description;

@@ -6,7 +6,7 @@ package ui.JWTeacher;
 
 import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.Font;
+import javax.swing.JOptionPane;
 import njuseaurora.cssclient.ui.Library.Navigation;
 
 
@@ -23,6 +23,7 @@ public class JWmainFrame extends javax.swing.JFrame {
      */
     public JWmainFrame() {
         initComponents();
+        setLocationRelativeTo(null);
         cardLayout = new CardLayout();
         framePanel = new FramePanel();
         planPanel = new PlanPanel();
@@ -84,6 +85,7 @@ public class JWmainFrame extends javax.swing.JFrame {
         planButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         backPanel.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -96,6 +98,11 @@ public class JWmainFrame extends javax.swing.JFrame {
         ExitButton.setForeground(new java.awt.Color(255, 255, 255));
         ExitButton.setText("X");
         ExitButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitButtonMouseClicked(evt);
+            }
+        });
         ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitButtonActionPerformed(evt);
@@ -531,6 +538,13 @@ public class JWmainFrame extends javax.swing.JFrame {
     private void exitLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_exitLabelMouseEntered
+
+    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
+        // TODO add your handling code here:
+      //  JOptionPane.showMessageDialog(this, evt);
+      //  this.setVisible(false);
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtonMouseClicked
 
     /**
      * @param args the command line arguments

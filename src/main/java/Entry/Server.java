@@ -25,10 +25,10 @@ public class Server {
            System.out.println("Server:");
         try {
             DataFactory factory = new DataFactoryImpl();
-            FrameDataService fds = factory.getFrameData();
+          //  FrameDataService fds = factory.getFrameData();
             LocateRegistry.createRegistry(1099);
             Naming.rebind("dataFactory", factory);
-            Naming.rebind("frameDataService", fds);
+        //    Naming.rebind("frameDataService", fds);
         } catch (RemoteException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         } catch (MalformedURLException ex) {

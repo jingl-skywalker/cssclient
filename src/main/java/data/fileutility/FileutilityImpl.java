@@ -6,13 +6,19 @@ package data.fileutility;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.stream.FileImageOutputStream;
 
 /**
  *
@@ -29,18 +35,31 @@ public class FileutilityImpl implements FileUtility {
         this.fileName = fileName;
     }
 
-    private BufferedReader createReader() throws FileNotFoundException {
-        FileReader fr = new FileReader(this.fileName);
+    private BufferedReader createReader() throws FileNotFoundException, UnsupportedEncodingException {
+        //FileReader fr = new FileReader(this.fileName);
+
+        // FileReader fr=ne w FileReader
+        // FileInputStream fr=new FileInputStream(new InputStreamReader(this.fileName,"UTF-8"));
+        FileInputStream fs = new FileInputStream(this.fileName);
+        InputStreamReader fr = new InputStreamReader(fs, "UTF-8");
         BufferedReader bf = new BufferedReader(fr);
         return bf;
     }
 
     private PrintWriter createPrintWriter() throws FileNotFoundException {
-        PrintWriter writer = new PrintWriter(fileName);
-        return writer;
+        FileOutputStream fout=new FileOutputStream(fileName);
+        Writer writer=null;
+        try {
+            writer = new OutputStreamWriter(fout, "UTF-8");
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(FileutilityImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        PrintWriter pr=new PrintWriter(writer);
+       // PrintWriter writer = new PrintWriter(fileName);
+        return pr;
     }
 
-
+    @Override
     public boolean append(String oneline) {
         try {
             BufferedReader bf = createReader();
@@ -65,7 +84,7 @@ public class FileutilityImpl implements FileUtility {
         return true;
     }
 
-
+    @Override
     public boolean append(ArrayList<String> lines) {
         try {
             BufferedReader bf = createReader();
@@ -94,24 +113,28 @@ public class FileutilityImpl implements FileUtility {
 
     }
 
+    @Override
     public boolean append(int field, String oneTerm) {
         return false;
     }
 
-
+    @Override
     public String find(String ID) {
         return null;
     }
 
+    @Override
     public String find(int field, String key) {
-    
+        
+
         return null;
     }
 
-/**
- * 
- * @return all the content of a file 
- */
+    /**
+     *
+     * @return all the content of a file
+     */
+    @Override
     public ArrayList<String> find() {
         ArrayList<String> result = new ArrayList<String>();
         try {
@@ -129,12 +152,11 @@ public class FileutilityImpl implements FileUtility {
         return result;
     }
 
-
     public ArrayList<String> find(int[] fields, ArrayList<String> keys) {
         return null;
     }
 
-
+    @Override
     public boolean clear() {
         try {
             PrintWriter pr = createPrintWriter();
@@ -149,14 +171,14 @@ public class FileutilityImpl implements FileUtility {
 
     @Override
     public String find(int lineNum) {
-        String result=null;
+        String result = null;
         try {
-            BufferedReader bf=createReader();
-            int i=1;
-           while((result=bf.readLine())!=null&&i<lineNum){
-               i++;
-           }
-           bf.close();
+            BufferedReader bf = createReader();
+            int i = 1;
+            while ((result = bf.readLine()) != null && i < lineNum) {
+                i++;
+            }
+            bf.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FileutilityImpl.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -164,13 +186,11 @@ public class FileutilityImpl implements FileUtility {
         }
         return result;
     }
-   /** public static void main(String[] args) {
-        File file=new File("src/main/resourcestest.txt");
-        try {
-            file.createNewFile();
-        } catch (IOException ex) {
-            Logger.getLogger(FileutilityImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println("ok");
-    }**/
+    /**
+     * public static void main(String[] args) { File file=new
+     * File("src/main/resourcestest.txt"); try { file.createNewFile(); } catch
+     * (IOException ex) {
+     * Logger.getLogger(FileutilityImpl.class.getName()).log(Level.SEVERE, null,
+     * ex); } System.out.println("ok"); }*
+     */
 }
